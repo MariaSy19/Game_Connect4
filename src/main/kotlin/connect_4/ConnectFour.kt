@@ -26,6 +26,30 @@ class ConnectFour {
 
             }
         }
+        //check winner ' horizontal line '
+        for (row in 0 until 6){
+                   for (col in 0 until 3){
+                       if (board[row][col] != ' ' &&
+                           board[row][col] == board[row][col + 1] &&
+                           board[row][col] == board[row][col + 2] &&
+                           board[row][col] == board[row][col + 3])
+                       {
+                           return true
+                       }
+                   }
+               }
+         //check winner ' vertical line '
+         for (col in 0 until 7){
+                    for (row in 0 until 3){
+                        if (board[row][col] != ' ' &&
+                            board[row][col] == board[row + 1][col] &&
+                            board[row][col] == board[row + 2][col] &&
+                            board[row][col] == board[row + 3][col])
+                        {
+                            return true
+                        }
+                    }
+         }
         return false
     }
 
