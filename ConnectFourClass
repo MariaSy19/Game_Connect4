@@ -1,0 +1,32 @@
+class ConnectFour {
+
+    val board: Array<CharArray> = Array(6) { CharArray(7) { ' ' } }
+    var gameOver : Boolean = false
+    var c : Char = 'X'
+   fun CheckWen():Boolean {
+            for(row in 0..3){
+            for (col in 0.. 2){
+                if(board[row][col]!=' '&&
+                    board[row][col]==board[row+1][col+1]&&
+                    board[row][col]==board[row+2][col+2]&&
+                    board[row][col]==board[row+3][col+3]){
+                    return true
+                }
+
+            }
+        }
+        for(row in 0..3){
+            for (col in 6 downTo  3){
+                if(board[row][col]!=' '&&
+                    board[row][col]==board[row+1][col-1]&&
+                    board[row][col]==board[row+2][col-2]&&
+                    board[row][col]==board[row+3][col-3]){
+                    return true
+                }
+
+            }
+        }
+        return false
+
+}
+}
