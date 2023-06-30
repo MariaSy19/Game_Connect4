@@ -2,8 +2,6 @@ package connect_4
 
 class ConnectFour {
     val board: Array<Array<String>> = Array(6) { Array(7) { " " } }
-    var gameOver: Boolean = false
-    var c: Char = 'X'
     fun checkWin(): Boolean {
         for (row in 0..3) {
             for (col in 0..2) {
