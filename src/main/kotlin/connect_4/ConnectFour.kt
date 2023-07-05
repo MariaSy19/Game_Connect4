@@ -55,8 +55,14 @@ class ConnectFour {
 
     fun checkDraw() : Boolean
     {
-        // write the code of check draw function here
-        // the true return value is to avoid the error only you can delete it
+         for (row in 1.. 5){
+            for(col in 1..6){
+                if (board[row][col]==' '){
+                    return false
+                }
+            }
+        }
+        
         return true
     }
 
